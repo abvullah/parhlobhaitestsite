@@ -10,7 +10,7 @@
 
     <div class="topbar">
         <div class="container">
-            <span><b>parhlobhai&nbsp;&nbsp;</b></span>
+            <span><b>parhlobhai&nbsp;&nbsp;|&nbsp;&nbsp;parhlobhai.com</b></span>
             <button class="dark-toggle" id="darkToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
         </div>
     </div>
@@ -32,24 +32,27 @@
 
         <div class="title-block">
             <h1>O Levels</h1>
-            <div class="sub">Cambridge O Level resources – pure old school.</div>
+            <div class="sub">Cambridge O Level past papers, notes, and revision resources for all major subjects.</div>
         </div>
 
         <div class="dropdown-container">
             <label for="subjectSelect" class="dropdown-label">Select a subject:</label>
             <select id="subjectSelect" class="native-select">
-                <option value="physics">⚡ Physics</option>
-                <option value="chemistry">🧪 Chemistry</option>
-                <option value="math">📐 Mathematics</option>
-                <option value="biology">🔬 Biology</option>
                 <option value="accounting">📊 Accounting</option>
-                <option value="business">💼 Business Studies</option>
-                <option value="cs">💻 Computer Science</option>
-                <option value="english">📖 English Language</option>
-                <option value="pakstudies">🇵🇰 Pakistan Studies</option>
+                <option value="additional-math">➕ Additional Mathematics</option>
+                <option value="biology">🔬 Biology</option>
+                <option value="business-studies">💼 Business Studies</option>
+                <option value="chemistry">🧪 Chemistry</option>
+                <option value="computer-science">💻 Computer Science</option>
+                <option value="economics">📈 Economics</option>
+                <option value="english-language">📖 English Language</option>
+                <option value="environmental-management">🌿 Environmental Management</option>
                 <option value="islamiyat">🕌 Islamiyat</option>
-                <option value="urdu">📝 Urdu</option>
-                <option value="addmath">➕ Additional Mathematics</option>
+                <option value="mathematics">📐 Mathematics</option>
+                <option value="pakistan-studies">🇵🇰 Pakistan Studies</option>
+                <option value="physics">⚡ Physics</option>
+                <option value="urdu-3247">📝 Urdu (3247)</option>
+                <option value="urdu-3248">📝 Urdu (3248)</option>
             </select>
         </div>
 
@@ -66,135 +69,156 @@
     <script src="script.js"></script>
     <script>
         const subjects = {
-            physics: {
-                name: "⚡ Physics",
-                resources: [
-                    { tag: "[FOLDER]", title: "Physics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Physics Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports with common mistakes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Unsolved Topicals", desc: "Topic-wise practice questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Worksheets", desc: "Practice worksheets", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Formula Sheets", desc: "All formulas in one place", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            chemistry: {
-                name: "🧪 Chemistry",
-                resources: [
-                    { tag: "[FOLDER]", title: "Chemistry Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Chemistry Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Unsolved Topicals", desc: "Topic-wise practice questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Worksheets", desc: "Practice worksheets", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            math: {
-                name: "📐 Mathematics",
-                resources: [
-                    { tag: "[FOLDER]", title: "Math Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Math Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Unsolved Topicals", desc: "Topic-wise practice questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Formula Sheets", desc: "All formulas in one place", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            biology: {
-                name: "🔬 Biology",
-                resources: [
-                    { tag: "[FOLDER]", title: "Biology Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Biology Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Unsolved Topicals", desc: "Topic-wise practice questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Practical Notes", desc: "Practical-based assessments", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            accounting: {
+            "accounting": {
                 name: "📊 Accounting",
                 resources: [
-                    { tag: "[FOLDER]", title: "Accounting Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Accounting Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "O Level Accounting Book", desc: "A comprehensive textbook covering all O Level Accounting topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1q-VTJutjPCVpWdx0RSXA5pY93pQRh7f5?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Accounting Notes", desc: "Concise notes covering all key topics for O Level Accounting.", url: "https://drive.google.com/drive/folders/15Lw0yglFot2dL2BgTl-GQB3qoB7yUYP0?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Accounting Past Papers", desc: "A collection of past exam papers for IGCSE Accounting with mark schemes.", url: "https://drive.google.com/drive/folders/1Zh6W0qgxV7AZ5mzhgtCZPt8vh5ZK0B4z?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Accounting Past Papers", desc: "A collection of past exam papers for O Levels Accounting with mark schemes.", url: "https://drive.google.com/drive/folders/1E5Khv0wzB1L0gbVVROKph_flJbguGXVM?usp=drive_link" }
                 ]
             },
-            business: {
-                name: "💼 Business Studies",
-                resources: [
-                    { tag: "[FOLDER]", title: "Business Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Business Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            cs: {
-                name: "💻 Computer Science",
-                resources: [
-                    { tag: "[FOLDER]", title: "CS Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "CS Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Pseudocode Guide", desc: "Programming fundamentals", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            english: {
-                name: "📖 English Language",
-                resources: [
-                    { tag: "[FOLDER]", title: "English Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "English Notes", desc: "Grammar & vocabulary", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Example Candidate Responses", desc: "High-scoring answers", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Essay Writing Guide", desc: "Structure, analysis, examples", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            pakstudies: {
-                name: "🇵🇰 Pakistan Studies",
-                resources: [
-                    { tag: "[FOLDER]", title: "Pakistan Studies Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Pakistan Studies Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Geography Revision", desc: "Quick revision notes", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            islamiyat: {
-                name: "🕌 Islamiyat",
-                resources: [
-                    { tag: "[FOLDER]", title: "Islamiyat Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Marking Schemes", desc: "Official marking guidelines", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            urdu: {
-                name: "📝 Urdu",
-                resources: [
-                    { tag: "[FOLDER]", title: "Urdu Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Urdu Notes", desc: "Grammar & vocabulary", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            addmath: {
+            "additional-math": {
                 name: "➕ Additional Mathematics",
                 resources: [
-                    { tag: "[FOLDER]", title: "Add Math Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Add Math Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Solved Topicals", desc: "Topic-wise solved questions", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Worksheets", desc: "Practice worksheets", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "O Level Additional Mathematics Book", desc: "A comprehensive textbook covering all O Level Additional Mathematics topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1MMgWd7Jjeo5b1mrtz9XzxDkvFgQAYx2W?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Additional Mathematics Notes", desc: "Concise notes covering all key topics for O Level Additional Mathematics.", url: "https://drive.google.com/drive/folders/1n9s8Xo2l7mLh3Z5v6y9XzDkvFgQAYx2W?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Additional Mathematics Past Papers", desc: "A collection of past exam papers for IGCSE Additional Mathematics with mark schemes.", url: "https://drive.google.com/drive/folders/1K4cuvjd7DGlEteMt0UCBWOtCQtCf5Due?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Additional Mathematics Past Papers", desc: "A collection of past exam papers for O Levels Additional Mathematics with mark schemes.", url: "https://drive.google.com/drive/folders/1c9U85rmhXKv05qyeTUrmAjWf8JQo-wxA?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Additional Mathematics Topicals", desc: "A collection of topical questions for O Levels Additional Mathematics organized by topic.", url: "https://drive.google.com/drive/folders/1wgOBOI-9PqhhhMgTQtXhmPcx2NJxbLnJ?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Additional Mathematics Worksheets", desc: "A collection of practice worksheets for O Levels Additional Mathematics.", url: "https://drive.google.com/drive/folders/1LUenQcdgxvsIhOclhlXwN8u_6t41xgo8?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Additional Mathematics Candidate Scripts", desc: "A collection of high scoring candidate scripts for O Levels Additional Mathematics.", url: "https://drive.google.com/drive/folders/1t2xaJdVeH_dWbCYedKzl3hr19TQQ7joA?usp=drive_link" }
+                ]
+            },
+            "biology": {
+                name: "🔬 Biology",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Biology Book", desc: "A comprehensive textbook covering all O Level Biology topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1r8Lqqe8DaI5XS5I-DTMouAvkA8g6k-En?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Biology Notes", desc: "Concise notes covering all key topics for O Level Biology.", url: "https://drive.google.com/drive/folders/1M2Nw1ukZt83bQ-R311whLirbC8kCggIC?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Biology Past Papers", desc: "A collection of past exam papers for IGCSE Biology with mark schemes.", url: "https://drive.google.com/drive/folders/1NR1NMmbOsMSoxNM2n0wDKzSo2K-5zhf8?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Biology Past Papers", desc: "A collection of past exam papers for O Levels Biology with mark schemes.", url: "https://drive.google.com/drive/folders/16pSnoD2DVj3VeRadscSFdUc7x7ReNI73?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Biology Workbooks", desc: "A collection of workbooks for O Levels Biology with practice questions and exercises.", url: "https://drive.google.com/drive/folders/1itQ2EtXC5Dqp8mW6fIeNNZhcbgTCWMAK?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Biology Candidate Scripts", desc: "A collection of high scoring candidate scripts for O Levels Biology.", url: "https://drive.google.com/drive/folders/13fWJD2_uvF23oJgg3iXme7WHdxauVotn?usp=drive_link" }
+                ]
+            },
+            "business-studies": {
+                name: "💼 Business Studies",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Business Studies Book", desc: "A comprehensive textbook covering all O Level Business Studies topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1NGSg6GOYIC7oBtCODgFjGCQ5EJSJK5kS?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Business Studies Notes", desc: "Concise notes covering all key topics for O Level Business Studies.", url: "https://drive.google.com/drive/folders/1bfQP3_UQlV3YYgXnK_uw2LlC98E4odq2?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Business Studies Past Papers", desc: "A collection of past exam papers for IGCSE Business Studies with mark schemes.", url: "https://drive.google.com/drive/folders/1CdErtOfR2s7O0-dRSHv_6H8IcpX-6SfN?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Business Studies Past Papers", desc: "A collection of past exam papers for O Levels Business Studies with mark schemes.", url: "https://drive.google.com/drive/folders/1Qm6F25S_Wp9bfzZ6bN36nd1YSda7gjmu?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Business Studies Topicals", desc: "A collection of topical questions for O Levels Business Studies organized by topic.", url: "https://drive.google.com/drive/folders/1cuSXX9Tj_222GWeBrOF29y-YnfJkej40?usp=drive_link" }
+                ]
+            },
+            "chemistry": {
+                name: "🧪 Chemistry",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Chemistry Book", desc: "A comprehensive textbook covering all O Level Chemistry topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1HCZ3Pp9jXWcADV8R0IjT8oBjymBJT1R9?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Chemistry Notes", desc: "Concise notes covering all key topics for O Level Chemistry.", url: "https://drive.google.com/drive/folders/1UoVs_KokaSv2zp4nmwsLm-3bjnYHDPGJ?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Chemistry Past Papers", desc: "A collection of past exam papers for IGCSE Chemistry with mark schemes.", url: "https://drive.google.com/drive/folders/18dLRpqD_5uqYnoUxm9DFjlLp0rA0MlAo?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Chemistry Past Papers", desc: "A collection of past exam papers for O Levels Chemistry with mark schemes.", url: "https://drive.google.com/drive/folders/10-4v6zQ3fkAma17wH9Og2XyBeYPNLQtZ?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Chemistry Topicals", desc: "A collection of topical questions for O Levels Chemistry organized by topic.", url: "https://drive.google.com/drive/folders/1bzfHhXbh2QFj6UAJFf1J8iKtkX7AgszY?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Chemistry Candidate Scripts", desc: "A collection of high scoring candidate scripts for O Levels Chemistry.", url: "https://drive.google.com/drive/folders/1xG4wvr61QXWospLEIE8BDb_TdIBZMknI?usp=drive_link" }
+                ]
+            },
+            "computer-science": {
+                name: "💻 Computer Science",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Computer Science Book", desc: "A comprehensive textbook covering all O Level Computer Science topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1RNCQu3j9xIMA0ZMcq_fVYLR3X5ueixnX?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Computer Science Notes", desc: "Concise notes covering all key topics for O Level Computer Science.", url: "https://drive.google.com/drive/folders/1mtLEVdpBrwwtiYRrvWmP8INj8fZ9_hOU?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Computer Science Past Papers", desc: "A collection of past exam papers for IGCSE Computer Science with mark schemes.", url: "https://drive.google.com/drive/folders/1YBWpAu23uaPvApMM8cH5YMBBos-0EuOU?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Computer Science Past Papers", desc: "A collection of past exam papers for O Levels Computer Science with mark schemes.", url: "https://drive.google.com/drive/folders/1nF6NoDYWe5GyLkOnci5-gS9z6YrpgpP3?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Computer Science Topicals", desc: "A collection of topical questions for O Levels Computer Science organized by topic.", url: "https://drive.google.com/drive/folders/1aASEFG-DnOr-hzc1QkHzOALK4vLzE6z2?usp=drive_link" }
+                ]
+            },
+            "economics": {
+                name: "📈 Economics",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Economics Notes", desc: "Concise notes covering all key topics for O Level Economics.", url: "https://drive.google.com/drive/folders/1Q43P9z1PfncKGXnwNvSVsSL42UlLD6QC?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Economics Past Papers", desc: "A collection of past exam papers for IGCSE Economics with mark schemes.", url: "https://drive.google.com/drive/folders/16w09RwbS4O3NW4tndWInXw66TqgtZ1fo?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Economics Past Papers", desc: "A collection of past exam papers for O Levels Economics with mark schemes.", url: "https://drive.google.com/drive/folders/1InOSp-ekYIGMHJA8KzkT-Sb2katG3Pwk?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Economics Topicals", desc: "A collection of topical questions for O Levels Economics organized by topic.", url: "https://drive.google.com/drive/folders/1IAGd5NZKAwxsBeELIaGKcKbkAjl29AVz?usp=drive_link" }
+                ]
+            },
+            "english-language": {
+                name: "📖 English Language",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level English Language Books", desc: "A collection of comprehensive textbooks covering all O Level English Language topics with examples and exercises.", url: "https://drive.google.com/drive/folders/12Cb5VwMXUY9yRb6PkRUsU4SKsp77maxR?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Example Candidate Responses", desc: "A collection of example candidate responses for O Level English Language with examiner comments.", url: "https://drive.google.com/drive/folders/1kKOb-LIuIcaWv8Myaynut0gr170A8IDL?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels English Language Past Papers", desc: "A collection of past exam papers for O Levels English Language with mark schemes.", url: "https://drive.google.com/drive/folders/1lByOWoBxlQ_sGhFqx2PihQo9sLlW7-0b?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels English Language Samples", desc: "A collection of sample essays and writing pieces for O Levels English Language.", url: "https://drive.google.com/drive/folders/1HlpUUqYqhpyJux4VNuktKZj6rLZwKJof?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels English Language Vocabulary Lists", desc: "A collection of vocabulary lists for O Levels English Language organized by topic.", url: "https://drive.google.com/drive/folders/1Xl2v9Xo2l7mLh3Z5v6y9XzDkvFgQAYx2W?usp=drive_link" }
+                ]
+            },
+            "environmental-management": {
+                name: "🌿 Environmental Management",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Environmental Management Book", desc: "A collection of comprehensive textbooks covering all O Level Environmental Management topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1Au9E2dETuD8YfT9CUYMZSvy8ib38ltz0?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Environmental Example Candidate Responses", desc: "A collection of example candidate responses for O Levels Environmental Management with examiner comments.", url: "https://drive.google.com/drive/folders/1z4pG98p854NQySE2jNklTrqxMqeVg913?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Environmental Management Past Papers", desc: "A collection of past exam papers for O Levels Environmental Management with mark schemes.", url: "https://drive.google.com/drive/folders/1plwjcpe_GpbE7A_0lSpvdK3rXRyv8vD5?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Environmental Management Topicals", desc: "A collection of topical questions for O Levels Environmental Management organized by topic.", url: "https://drive.google.com/drive/folders/1X73IgYuKXv2_aq0Q_7YRq8LIJN0YnCC4?usp=drive_link" }
+                ]
+            },
+            "islamiyat": {
+                name: "🕌 Islamiyat",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Islamiyat Notes", desc: "Concise notes covering all key topics for O Level Islamiyat. Notes include Sir Abdullah Ishaq, Sir Umar Khan, Sir Muzammil Mehmood, and Sir Yousuf Memon", url: "https://drive.google.com/drive/folders/1xYiuyXY_cFTchTyNjjqp68mRpQnUU8jF?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Islamiyat Past Papers", desc: "A collection of past exam papers for O Levels Islamiyat with mark schemes.", url: "https://drive.google.com/drive/folders/1nF6NoDYWe5GyLkOnci5-gS9z6YrpgpP3?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Islamiyat Topicals", desc: "A collection of topical questions for O Levels Islamiyat organized by topic.", url: "https://drive.google.com/drive/folders/1SJsDiFf4qX6Ge5tINvfGusYc0OLrQLaH?usp=drive_link" }
+                ]
+            },
+            "mathematics": {
+                name: "📐 Mathematics",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Mathematics Book", desc: "A comprehensive textbook covering all O Level Mathematics topics with examples and exercises.", url: "https://drive.google.com/drive/folders/1Z2k7l3Ic90XsTL2aoQRKUugOmCTVocQE?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Level Mathematics Notes", desc: "Concise notes covering all key topics for O Level Mathematics.", url: "https://drive.google.com/drive/folders/1n9s8Xo2l7mLh3Z5v6y9XzDkvFgQAYx2W?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Mathematics Past Papers", desc: "A collection of past exam papers for IGCSE Mathematics with mark schemes.", url: "https://drive.google.com/drive/folders/1Q-PWvU75UZoP8n2apa9RF8zLGoHJpbb6?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Mathematics Past Papers", desc: "A collection of past exam papers for O Levels Mathematics with mark schemes.", url: "https://drive.google.com/drive/folders/1-V_VO2Va9E3UCLyJoRIlY0UAzMtymMUo?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Mathematics Topicals", desc: "A collection of topical questions for O Levels Mathematics organized by topic.", url: "https://drive.google.com/drive/folders/1g4vIfHirm02R2Vm3W6w7qr91aHfGQv-c?usp=drive_link" },
+                    { tag: "[PDF]", title: "O Levels Mathematics Formula Sheet", desc: "A comprehensive formula sheet for O Levels Mathematics.", url: "https://drive.google.com/file/d/1LybsjhO9LYbKnOepJYe_c_xl7ONJ933o/view?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Mathematics Candidate Scripts", desc: "A collection of high scoring candidate scripts for O Levels Mathematics.", url: "https://drive.google.com/drive/folders/1s2Vy5EamgsWGEOSxpHWlFdkIPFTznuRb?usp=drive_link" }
+                ]
+            },
+            "pakistan-studies": {
+                name: "🇵🇰 Pakistan Studies",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Pakistan Studies Books", desc: "Comprehensive textbooks covering all key topics for O Level Pakistan Studies.", url: "https://drive.google.com/drive/folders/1cLsr7JVDOeHDatGObd56qcYB5AxfmhCH?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Pakistan Studies Notes", desc: "Concise notes covering all key topics for O Level Pakistan Studies. By Major Tahir Ali Babar, Sir Muhammad Yousuf Memon, and Quick revision Geography notes", url: "https://drive.google.com/drive/folders/15tAg7Il9GsSBpJ78LdjLCBs5GJSS69La?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Pakistan Studies Past Papers", desc: "A collection of past exam papers for O Levels Pakistan Studies with mark schemes.", url: "https://drive.google.com/drive/folders/1Z3ehAXtmgOYbg2XBPwIVhyk0OATOQqKS?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Pakistan Studies Tests", desc: "A collection of practice tests for O Levels Pakistan Studies with mark schemes.", url: "https://drive.google.com/drive/folders/1sge6Ug0Gl1zV7b5-Zs5BI3ARcuSpWIIP?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Pakistan Studies Topicals", desc: "A collection of topical questions for O Levels Pakistan Studies organized by topic.", url: "https://drive.google.com/drive/folders/1fULlQUYPN2YDVzHPIqieZsmPLQnpY7QG?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Pakistan Studies Solved Topicals", desc: "A collection of solved topical questions for O Levels Pakistan Studies Geography (2059/02) organized by topic.", url: "https://drive.google.com/drive/folders/1C5UdwWw_5MNgZ1m4SoqIgUUvs2bDOlmR?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Pakistan Studies Candidate Scripts", desc: "A collection of high scoring candidate scripts for O Levels Pakistan Studies.", url: "https://drive.google.com/drive/folders/1e_yIu-V8QKoIhl0CEzhDQ0DLDn1v4zoS?usp=drive_link" }
+                ]
+            },
+            "physics": {
+                name: "⚡ Physics",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Physics Books", desc: "Comprehensive textbooks covering all key topics for O Level Physics.", url: "https://drive.google.com/drive/folders/18d7JQ9Kh71vKktQDPGhCD1mzjQQSxveA?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Physics Notes", desc: "Concise notes covering all key topics for O Level Physics.", url: "https://drive.google.com/drive/folders/11AdbhXlJ1qAuMBFLs9jfPSFRJvYJr1t9?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "IGCSE Physics Past Papers", desc: "A collection of past exam papers for IGCSE Physics with mark schemes.", url: "https://drive.google.com/drive/folders/1fyThkMKyaJDHFFoh_GA8omf-7yOGXTMa?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Physics Past Papers", desc: "A collection of past exam papers for O Levels Physics with mark schemes.", url: "https://drive.google.com/drive/folders/1gCxIEEygDmq6jL6AtiHlgdlr3mILCES_?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Physics Topicals", desc: "A collection of topical questions for O Levels Physics organized by topic.", url: "https://drive.google.com/drive/folders/16LuxyiPK6U5lpebEhh_v4FU-kpcjMVjy?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Physics Worksheets", desc: "A collection of practice worksheets for O Levels Physics organized by topic.", url: "https://drive.google.com/drive/folders/1XNqsloSJRn6ZkUIK0OFAeq5elP5hgick?usp=drive_link" },
+                    { tag: "[PDF]", title: "O Levels Physics Formula Sheet", desc: "A comprehensive formula sheet for O Levels Physics.", url: "https://drive.google.com/file/d/1t4_FWNBXOG8M1jEHmK-sgXjcYg8zFKxz/view?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Physics Candidate Scripts", desc: "A collection of high scoring candidate scripts for O Levels Physics.", url: "https://drive.google.com/drive/folders/1w6LT0puGLujnSaqiNjfdjsvvddY_AeTy?usp=drive_link" }
+                ]
+            },
+            "urdu-3247": {
+                name: "📝 Urdu (3247)",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Urdu Notes", desc: "Concise notes covering all key topics for O Level Urdu.", url: "https://drive.google.com/drive/folders/1arz5_0ZylVoagkxrb3_7aIBebUGEn-Wj?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Urdu Past Papers", desc: "A collection of past exam papers for O Levels Urdu with mark schemes.", url: "https://drive.google.com/drive/folders/1yAwXRKmwK2_KcPRbHAPpT8TZ4ZD90XWw?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Urdu Examiner Candidate Responses", desc: "A collection of example candidate responses for O Levels Urdu with examiner comments.", url: "https://drive.google.com/drive/folders/109TP5xir-p_uPdFsn4gCig7NJoxHdkkl?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Urdu First Language trauma sheet 🥀", desc: "A comprehensive trauma drive that I used for my Urdu A preparation. Includes notes, scripts of high achieving candidates.", url: "https://drive.google.com/drive/folders/129RVPBKff7WNrsPQ1ixVuuKHb9Q0uBeF?usp=drive_link" }
+                ]
+            },
+            "urdu-3248": {
+                name: "📝 Urdu (3248)",
+                resources: [
+                    { tag: "[FOLDER]", title: "O Level Urdu Grammar Notes", desc: "Concise grammar notes covering all key topics for O Level Urdu Grammar.", url: "https://drive.google.com/drive/folders/1raDYHkZVpDsFv05VWxC5A9XqUmYyQPna?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "O Levels Urdu Past Papers", desc: "A collection of past exam papers for O Levels Urdu with mark schemes.", url: "https://drive.google.com/drive/folders/1qbSKFXF2o72jljPX3W2OCk3CoqWuAxmX?usp=drive_link" }
                 ]
             }
         };

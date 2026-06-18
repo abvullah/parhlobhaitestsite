@@ -10,7 +10,7 @@
 
     <div class="topbar">
         <div class="container">
-            <span><b>parhlobhai&nbsp;&nbsp;</b></span>
+            <span><b>parhlobhai&nbsp;&nbsp;|&nbsp;&nbsp;parhlobhai.com</b></span>
             <button class="dark-toggle" id="darkToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
         </div>
     </div>
@@ -32,20 +32,17 @@
 
         <div class="title-block">
             <h1>Intermediate</h1>
-            <div class="sub">FSc Pre-Medical, Pre-Engineering, and ICS resources for Class 11 & 12.</div>
+            <div class="sub">FSc Pre-Medical, Pre-Engineering, and ICS resources for Class 11 & 12 students.</div>
         </div>
 
         <div class="dropdown-container">
             <label for="subjectSelect" class="dropdown-label">Select a subject:</label>
             <select id="subjectSelect" class="native-select">
-                <option value="math">📐 Mathematics</option>
+                <option value="mathematics">📐 Mathematics</option>
                 <option value="physics">⚡ Physics</option>
                 <option value="chemistry">🧪 Chemistry</option>
                 <option value="biology">🔬 Biology</option>
                 <option value="english">📖 English</option>
-                <option value="cs">💻 Computer Science</option>
-                <option value="economics">📈 Economics</option>
-                <option value="pakstudies">🇵🇰 Pakistan Studies</option>
             </select>
         </div>
 
@@ -62,76 +59,34 @@
     <script src="script.js"></script>
     <script>
         const subjects = {
-            math: {
+            "mathematics": {
                 name: "📐 Mathematics",
                 resources: [
-                    { tag: "[FOLDER]", title: "Math Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Math Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Mathematics Resources for 11th/12th", desc: "A drive consisting of resources for mathematics for 11th and 12th graders", url: "https://drive.google.com/drive/folders/1uD3oNwl7kIsEgV3fwEkv8ms0ZVk6pbn4?usp=drive_link" }
                 ]
             },
-            physics: {
+            "physics": {
                 name: "⚡ Physics",
                 resources: [
-                    { tag: "[FOLDER]", title: "Physics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Physics Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Physics resources for 11th/12th", desc: "A drive consisting of resources for physics for 11th and 12th graders", url: "https://drive.google.com/drive/folders/1eLhSlxGHNkaTTx8DYaWpmrbojjkapxRa?usp=drive_link" }
                 ]
             },
-            chemistry: {
+            "chemistry": {
                 name: "🧪 Chemistry",
                 resources: [
-                    { tag: "[FOLDER]", title: "Chemistry Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Chemistry Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Chemistry resources for 11/12th", desc: "A drive consisting of resources for chemistry for 11th and 12th graders", url: "https://drive.google.com/drive/folders/17_xS9qtpv54I4-_yiH51wH0PxWQVCpdO?usp=drive_link" }
                 ]
             },
-            biology: {
+            "biology": {
                 name: "🔬 Biology",
                 resources: [
-                    { tag: "[FOLDER]", title: "Biology Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Biology Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Biology resources for 11th/12th", desc: "A drive consisting of resources for biology for 11th and 12th graders", url: "https://drive.google.com/drive/folders/1ssPLP2z4ekfZn4dcCSAg1hYU3-eH4j-O?usp=drive_link" }
                 ]
             },
-            english: {
+            "english": {
                 name: "📖 English",
                 resources: [
-                    { tag: "[FOLDER]", title: "English Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "English Notes", desc: "Grammar & vocabulary", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            cs: {
-                name: "💻 Computer Science",
-                resources: [
-                    { tag: "[FOLDER]", title: "CS Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "CS Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            economics: {
-                name: "📈 Economics",
-                resources: [
-                    { tag: "[FOLDER]", title: "Economics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Economics Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            pakstudies: {
-                name: "🇵🇰 Pakistan Studies",
-                resources: [
-                    { tag: "[FOLDER]", title: "Pakistan Studies Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Pakistan Studies Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "English resources for 11th/12th", desc: "A drive consisting of resources for English for 11th and 12th graders", url: "https://drive.google.com/drive/folders/1peAgB2cBbfexJTg1a1S1pvyZP7raGqBK?usp=drive_link" }
                 ]
             }
         };

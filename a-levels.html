@@ -10,7 +10,7 @@
 
     <div class="topbar">
         <div class="container">
-            <span><b>parhlobhai&nbsp;&nbsp;</b></span>
+            <span><b>parhlobhai&nbsp;&nbsp;|&nbsp;&nbsp;parhlobhai.com</b></span>
             <button class="dark-toggle" id="darkToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
         </div>
     </div>
@@ -32,21 +32,20 @@
 
         <div class="title-block">
             <h1>A Levels</h1>
-            <div class="sub">Advanced Level – depth and rigour.</div>
+            <div class="sub">Cambridge AS & A Level past papers, mark schemes, and concise notes.</div>
         </div>
 
         <div class="dropdown-container">
             <label for="subjectSelect" class="dropdown-label">Select a subject:</label>
             <select id="subjectSelect" class="native-select">
-                <option value="physics">⚡ Physics</option>
-                <option value="chemistry">🧪 Chemistry</option>
-                <option value="math">📐 Mathematics</option>
                 <option value="biology">🔬 Biology</option>
-                <option value="cs">💻 Computer Science</option>
-                <option value="business">💼 Business Studies</option>
-                <option value="economics">📈 Economics</option>
-                <option value="psychology">🧠 Psychology</option>
-                <option value="sociology">📘 Sociology</option>
+                <option value="business-studies">💼 Business Studies</option>
+                <option value="chemistry">🧪 Chemistry</option>
+                <option value="computer-science">💻 Computer Science</option>
+                <option value="examiner-reports">📄 General Examiner Reports</option>
+                <option value="further-mathematics">📐 Further Mathematics</option>
+                <option value="mathematics">📐 Mathematics</option>
+                <option value="physics">⚡ Physics</option>
             </select>
         </div>
 
@@ -63,93 +62,77 @@
     <script src="script.js"></script>
     <script>
         const subjects = {
-            physics: {
-                name: "⚡ Physics",
-                resources: [
-                    { tag: "[FOLDER]", title: "Physics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "AS Physics Notes", desc: "AS Level notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "A2 Physics Notes", desc: "A2 Level notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Example Responses", desc: "High-scoring answers", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            chemistry: {
-                name: "🧪 Chemistry",
-                resources: [
-                    { tag: "[FOLDER]", title: "Chemistry Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "AS Chemistry Notes", desc: "AS Level notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "A2 Chemistry Notes", desc: "A2 Level notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            math: {
-                name: "📐 Mathematics",
-                resources: [
-                    { tag: "[FOLDER]", title: "Math Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Pure Math Notes", desc: "P1, P2, P3 notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Mechanics Notes", desc: "M1, M2 notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Statistics Notes", desc: "S1, S2 notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            biology: {
+            "biology": {
                 name: "🔬 Biology",
                 resources: [
-                    { tag: "[FOLDER]", title: "Biology Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "AS Biology Notes", desc: "AS Level notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "A2 Biology Notes", desc: "A2 Level notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Practical Notes", desc: "Practical-based assessments", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "A Level Biology Book", desc: "A comprehensive book covering the entire Biology syllabus.", url: "https://drive.google.com/drive/folders/1eLy_jvNSMlscU0oZ6XaPMLs15CUPcMK3?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Examiner reports for A Level Biology", url: "https://drive.google.com/drive/folders/159SB3fzk8AMnomPiQ98p3bAlfvaBHQ-f?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Notes", desc: "Notes for AS & A2 Biology", url: "https://drive.google.com/drive/folders/1Pqy0rRVXtECVx-LFHlYXOGa1FV9bKIUu?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level Biology Past Papers", desc: "Past papers for A Level Biology", url: "https://drive.google.com/drive/folders/1WlOdRGjNfdKR4We5a6MwNGgDPN8oFyJH?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Specimen Paper/Example Responses", desc: "Specimen paper and example responses for A Level Biology", url: "https://drive.google.com/drive/folders/1mtPwkbdX3ZIFRBV0AlK6Yypwv70Sj34S?usp=drive_link" }
                 ]
             },
-            cs: {
-                name: "💻 Computer Science",
-                resources: [
-                    { tag: "[FOLDER]", title: "CS Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "CS Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Pseudocode Guide", desc: "Programming fundamentals", url: "YOUR_FOLDER_LINK_HERE" },
-                ]
-            },
-            business: {
+            "business-studies": {
                 name: "💼 Business Studies",
                 resources: [
-                    { tag: "[FOLDER]", title: "Business Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Business Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "A Level Business Studies Book", desc: "A comprehensive book covering the entire Business Studies syllabus.", url: "https://drive.google.com/drive/folders/1ZF1EfmF9tgySiqDowbz2irqpcQYvhOEM?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level Business Studies Examiner Reports", desc: "Examiner reports for A Level Business Studies", url: "https://drive.google.com/drive/folders/1Nrgu-qK-TascGWCEX8CPcvjTyCZCiu3u?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Examiner Candidate Responses", desc: "Examiner Candidate Responses and Specimen Papers Answers for A Level Business Studies", url: "https://drive.google.com/drive/folders/1IazVz7W73cj-coscT-5Ux__KR9Dyz3WF?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level Business Studies Notes", desc: "Notes for AS & A2 Business Studies", url: "https://drive.google.com/drive/folders/16L5iA_FkP0l20gTtV9VDDCmFS4Ma373G?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level Business Studies Past Papers", desc: "Past papers for A Level Business Studies", url: "https://drive.google.com/drive/folders/1bbFu-zvjFI-E0wJcFpwD15jkCix1ROwI?usp=drive_link" }
                 ]
             },
-            economics: {
-                name: "📈 Economics",
+            "chemistry": {
+                name: "🧪 Chemistry",
                 resources: [
-                    { tag: "[FOLDER]", title: "Economics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Economics Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "A Level Chemistry Book", desc: "A comprehensive book covering the entire Chemistry syllabus.", url: "https://drive.google.com/drive/folders/1o7WC3seUrwh70feM4Xs673X3C-EE4P4A?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Examiner reports for A Level Chemistry", url: "https://drive.google.com/drive/folders/1Fk5gq5BzIL6i954fLUjAWqbEFfzaizke?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Notes", desc: "Notes for AS & A2 Chemistry", url: "https://drive.google.com/drive/folders/1Uv0Vi6056zlOU1ORFbCLeRnKslQvDV1H?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level Chemistry Past Papers", desc: "Past papers for A Level Chemistry", url: "https://drive.google.com/drive/folders/1O3bV2cPD59AzW7eD7rGJaZSXVK0inzwR?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Specimen Paper/Example Responses", desc: "Specimen paper and example responses for A Level Chemistry", url: "https://drive.google.com/drive/folders/1_j7dCMAbu5hgR10FTzAQ1BiEmpXXgQxI?usp=drive_link" }
                 ]
             },
-            psychology: {
-                name: "🧠 Psychology",
+            "computer-science": {
+                name: "💻 Computer Science",
                 resources: [
-                    { tag: "[FOLDER]", title: "Psychology Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Psychology Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "A Level CS Book", desc: "A comprehensive book covering the entire Computer Science syllabus.", url: "https://drive.google.com/drive/folders/1SEh9qRdFBOiweCwNqPz91ML08pMsX5m-?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level CS Examiner Reports", desc: "Examiner reports for A Level Computer Science", url: "https://drive.google.com/drive/folders/1hQkHLbEhCph1PjhffYjnMgyqnouJHfv7?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level CS Notes", desc: "Notes for AS & A2 Computer Science", url: "https://drive.google.com/drive/folders/1X41RHmBZVu3x9l6GtDmz1xgVVZSnQgVf?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level CS Past Papers", desc: "Past papers for A Level Computer Science", url: "https://drive.google.com/drive/folders/1vwinvZl2MQKkM-rkSRQSWoIs-6OLlWAV?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Topicals", desc: "Topic wise past paper questions for A Level Computer Science", url: "https://drive.google.com/drive/folders/1_5pyTGN4jbtSIHhkcubuG9NEpT_zr7bE?usp=drive_link" }
                 ]
             },
-            sociology: {
-                name: "📘 Sociology",
+            "examiner-reports": {
+                name: "📄 General Examiner Reports",
                 resources: [
-                    { tag: "[FOLDER]", title: "Sociology Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Sociology Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
-                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Official reports", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "General examiner reports for A Levels", desc: "Examiner reports for A Levels Accounting, Economics, Psychology, and Sociology.", url: "https://drive.google.com/drive/folders/1XqalduouEMM1Dg1jEDqjImdaLhccdaI9?usp=drive_link" }
+                ]
+            },
+            "further-mathematics": {
+                name: "📐 Further Mathematics",
+                resources: [
+                    { tag: "[FOLDER]", title: "Further Math Past Papers", desc: "Past papers for Further Mathematics", url: "https://drive.google.com/drive/folders/1DmkNb5usDFtBZju_ZgghLrIkk6-tYuOB?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Further Math Book", desc: "A comprehensive book covering the entire Further Mathematics syllabus.", url: "https://drive.google.com/drive/folders/1M_jvtR3KR1EgcAgieyDgnLhbg7rpP-R9?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Examiner reports for A Level Further Mathematics", url: "https://drive.google.com/drive/folders/16ixdgB0JLXRBweUHrRrKjxPd5MtZma1z?usp=drive_link" }
+                ]
+            },
+            "mathematics": {
+                name: "📐 Mathematics",
+                resources: [
+                    { tag: "[FOLDER]", title: "A Level Pure Math Past Papers", desc: "Sorted by year and variant from 2020 till 2026 (February/March)", url: "https://drive.google.com/drive/folders/1pkqn7dPes2u3xWXRDYk5U6hW9PEjqohi?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "P1, P3, M1, S1, S2 Notes", desc: "A collection of notes for Pure Mathematics 1, Pure Mathematics 3, Mechanics, Statistics 1, and Statistics 2.", url: "https://drive.google.com/drive/folders/187sfaOboUaTsTBq7Ej9cRggPYpU5YnPK?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Examiner reports for A Level Mathematics", url: "https://drive.google.com/drive/folders/1HY8RhFDmgqOshkN4S_vppPAbucKrykoG?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Specimen Paper/Example Responses", desc: "Specimen paper and example responses for A Level Mathematics", url: "https://drive.google.com/drive/folders/1s4-NDLDMgiStXrOLnlxJbBViAzN0ucwf?usp=drive_link" }
+                ]
+            },
+            "physics": {
+                name: "⚡ Physics",
+                resources: [
+                    { tag: "[FOLDER]", title: "A Level Physics Book", desc: "A comprehensive book covering the entire Physics syllabus.", url: "https://drive.google.com/drive/folders/1woNLKCRiTFolpMAoMyx114_txaON5elA?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Examiner Reports", desc: "Examiner reports for A Level Physics", url: "https://drive.google.com/drive/folders/1SPd0YMz76b_7fD0WlAmyRyKyB4OedY1_?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Notes", desc: "Notes for AS & A2 Physics", url: "https://drive.google.com/drive/folders/15a5NEF0QsvTvszEChBfBn0WP2hcwgXgX?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "A Level Physics Past Papers", desc: "Past papers for A Level Physics", url: "https://drive.google.com/drive/folders/1D_okyJ1TCQ2-NaOyITgJrorcGISPWs9l?usp=drive_link" },
+                    { tag: "[FOLDER]", title: "Specimen Paper/Example Responses", desc: "Specimen paper and example responses for A Level Physics", url: "https://drive.google.com/drive/folders/1yEHf-HzJ7dArY1mw66weAnyfrZb2W2Bq?usp=drive_link" }
                 ]
             }
         };
@@ -160,9 +143,10 @@
             const container = document.getElementById('resourcesContainer');
             let html = `<div class="cat-header">&gt;&gt; ${sub.name}</div>`;
             sub.resources.forEach(r => {
+                const tag = r.url.includes('file/d/') ? '[PDF]' : '[FOLDER]';
                 html += `
                     <div class="resource-row">
-                        <span class="tag">${r.tag}</span>
+                        <span class="tag">${tag}</span>
                         <div>
                             <a href="${r.url}" target="_blank">${r.title}</a>
                             <span class="desc">${r.desc}</span>
