@@ -43,6 +43,9 @@
                 <option value="chemistry">🧪 Chemistry</option>
                 <option value="biology">🔬 Biology</option>
                 <option value="english">📖 English</option>
+                <option value="cs">💻 Computer Science</option>
+                <option value="economics">📈 Economics</option>
+                <option value="pakstudies">🇵🇰 Pakistan Studies</option>
             </select>
         </div>
 
@@ -62,36 +65,73 @@
             math: {
                 name: "📐 Mathematics",
                 resources: [
-                    { tag: "[PDF]", title: "Math Notes – 11th/12th", desc: "All formulas & examples" },
-                    { tag: "[LINK]", title: "Past Papers", desc: "FBISE & Punjab Board" }
+                    { tag: "[FOLDER]", title: "Math Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Math Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
                 ]
             },
             physics: {
                 name: "⚡ Physics",
                 resources: [
-                    { tag: "[PDF]", title: "Physics Notes – 11th/12th", desc: "Full syllabus" },
-                    { tag: "[LINK]", title: "Past Papers", desc: "FBISE & Punjab Board" }
+                    { tag: "[FOLDER]", title: "Physics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Physics Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
                 ]
             },
             chemistry: {
                 name: "🧪 Chemistry",
                 resources: [
-                    { tag: "[PDF]", title: "Chemistry Notes – 11th/12th", desc: "Full syllabus" },
-                    { tag: "[LINK]", title: "Past Papers", desc: "FBISE & Punjab Board" }
+                    { tag: "[FOLDER]", title: "Chemistry Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Chemistry Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
                 ]
             },
             biology: {
                 name: "🔬 Biology",
                 resources: [
-                    { tag: "[PDF]", title: "Biology Notes – 11th/12th", desc: "Full syllabus" },
-                    { tag: "[LINK]", title: "Past Papers", desc: "FBISE & Punjab Board" }
+                    { tag: "[FOLDER]", title: "Biology Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Biology Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
                 ]
             },
             english: {
                 name: "📖 English",
                 resources: [
-                    { tag: "[PDF]", title: "English Grammar Guide", desc: "11th/12th" },
-                    { tag: "[LINK]", title: "Past Papers", desc: "FBISE & Punjab Board" }
+                    { tag: "[FOLDER]", title: "English Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "English Notes", desc: "Grammar & vocabulary", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                ]
+            },
+            cs: {
+                name: "💻 Computer Science",
+                resources: [
+                    { tag: "[FOLDER]", title: "CS Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "CS Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                ]
+            },
+            economics: {
+                name: "📈 Economics",
+                resources: [
+                    { tag: "[FOLDER]", title: "Economics Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Economics Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
+                ]
+            },
+            pakstudies: {
+                name: "🇵🇰 Pakistan Studies",
+                resources: [
+                    { tag: "[FOLDER]", title: "Pakistan Studies Books", desc: "Textbooks and reference books", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Pakistan Studies Notes", desc: "Topic-wise notes", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Past Papers", desc: "Yearly & topical", url: "YOUR_FOLDER_LINK_HERE" },
+                    { tag: "[FOLDER]", title: "Model Papers", desc: "Board-issued model papers", url: "YOUR_FOLDER_LINK_HERE" },
                 ]
             }
         };
@@ -105,7 +145,10 @@
                 html += `
                     <div class="resource-row">
                         <span class="tag">${r.tag}</span>
-                        <div><a href="#">${r.title}</a><span class="desc">${r.desc}</span></div>
+                        <div>
+                            <a href="${r.url}" target="_blank">${r.title}</a>
+                            <span class="desc">${r.desc}</span>
+                        </div>
                     </div>
                 `;
             });
