@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Matriculation – parhlobhai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <span><b>parhlobhai&nbsp;&nbsp;|&nbsp;&nbsp;parhlobhai.com</b></span>
+            <button class="dark-toggle" id="darkToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="o-levels.html">O Levels</a>
+            <a href="igcse.html">IGCSE</a>
+            <a href="a-levels.html">A Levels</a>
+            <a href="matriculation.html">Matriculation</a>
+            <a href="intermediate.html">Intermediate</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="title-block">
+            <h1>Matriculation</h1>
+            <div class="sub">Federal & provincial board resources for Matric Science and Arts.</div>
+        </div>
+
+        <div class="dropdown-container">
+            <label for="subjectSelect" class="dropdown-label">Select a subject:</label>
+            <select id="subjectSelect" class="native-select">
+                <option value="math">📐 Mathematics</option>
+                <option value="physics">⚡ Physics</option>
+                <option value="chemistry">🧪 Chemistry</option>
+                <option value="biology">🔬 Biology</option>
+                <option value="urdu">📝 Urdu</option>
+                <option value="islamiyat">🕌 Islamiyat</option>
+            </select>
+        </div>
+
+        <div id="resourcesContainer"></div>
+
+        <hr class="hr-90s">
+
+        <div class="footer">
+            &copy; 2026 parhlobhai &nbsp;|&nbsp; <a href="about.html">About</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const subjects = {
+            math: {
+                name: "📐 Mathematics",
+                resources: [
+                    { tag: "[PDF]", title: "Matric Math Model Paper – FBISE", desc: "9th grade" },
+                    { tag: "[PDF]", title: "Algebra Practice Questions", desc: "Solved exercises" }
+                ]
+            },
+            physics: {
+                name: "⚡ Physics",
+                resources: [
+                    { tag: "[PDF]", title: "Matric Physics Model Paper – FBISE", desc: "9th grade" },
+                    { tag: "[PDF]", title: "Practical Based Assessment Notes", desc: "9th & 10th" }
+                ]
+            },
+            chemistry: {
+                name: "🧪 Chemistry",
+                resources: [
+                    { tag: "[PDF]", title: "Matric Chemistry Model Paper – FBISE", desc: "9th grade" },
+                    { tag: "[PDF]", title: "Practical Based Assessment Notes", desc: "9th & 10th" }
+                ]
+            },
+            biology: {
+                name: "🔬 Biology",
+                resources: [
+                    { tag: "[PDF]", title: "Matric Biology Model Paper – FBISE", desc: "9th grade" },
+                    { tag: "[PDF]", title: "Practical Based Assessment Notes", desc: "9th & 10th" }
+                ]
+            },
+            urdu: {
+                name: "📝 Urdu",
+                resources: [
+                    { tag: "[PDF]", title: "Matric Urdu Model Paper – FBISE", desc: "9th grade" },
+                    { tag: "[PDF]", title: "Grammar Notes", desc: "Key rules" }
+                ]
+            },
+            islamiyat: {
+                name: "🕌 Islamiyat",
+                resources: [
+                    { tag: "[PDF]", title: "Matric Islamiyat Model Paper – FBISE", desc: "9th grade" },
+                    { tag: "[PDF]", title: "Important Surahs & Duas", desc: "List" }
+                ]
+            }
+        };
+
+        function renderResources(key) {
+            const sub = subjects[key];
+            if (!sub) return;
+            const container = document.getElementById('resourcesContainer');
+            let html = `<div class="cat-header">&gt;&gt; ${sub.name}</div>`;
+            sub.resources.forEach(r => {
+                html += `
+                    <div class="resource-row">
+                        <span class="tag">${r.tag}</span>
+                        <div><a href="#">${r.title}</a><span class="desc">${r.desc}</span></div>
+                    </div>
+                `;
+            });
+            html += `<div class="back-top"><a href="#top">[Back to Top]</a></div>`;
+            container.innerHTML = html;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const select = document.getElementById('subjectSelect');
+            renderResources(select.value);
+            select.addEventListener('change', function() {
+                renderResources(this.value);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+/* ─── RESET & BASE ─── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefaf5;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background 0.2s, color 0.2s;
+}
+
+a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+a:visited {
+    color: #551A8B;
+}
+a:hover {
+    color: #D4A853;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ─── TOP BAR ─── */
+.topbar {
+    background: #000000;
+    color: #ffffff;
+    padding: 4px 1rem;
+    font-size: 12px;
+    transition: background 0.2s, color 0.2s;
+}
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ─── NAV ─── */
+.navbar {
+    background: #cccccc;
+    padding: 3px 1rem;
+    font-size: 13px;
+    border-bottom: 2px outset #ffffff;
+    transition: background 0.2s, border-color 0.2s;
+}
+.navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    align-items: center;
+}
+.navbar a {
+    color: #0000EE;
+    text-decoration: none;
+    padding: 2px 6px;
+    background: #e0e0e0;
+    border: 2px outset #ffffff;
+    display: inline-block;
+    margin: 2px 0;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.navbar a:hover {
+    background: #D4A853;
+    color: #000;
+}
+.navbar a.active {
+    background: #D4A853;
+    color: #000;
+    border-color: #D4A853;
+}
+
+/* ─── TITLE BLOCK ─── */
+.title-block {
+    border: 2px solid #000000;
+    background: #ffffff;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    margin: 1rem 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+.title-block h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+    margin: 0;
+    color: #000;
+    transition: color 0.2s;
+}
+.title-block .sub {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #000;
+    transition: color 0.2s;
+}
+
+/* ─── INTRO ─── */
+.intro {
+    font-size: 13px;
+    padding: 0.5rem 0;
+}
+
+/* ─── BOARD GRID ─── */
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.board-btn {
+    background: #f0f0f0;
+    border: 3px outset #cccccc;
+    padding: 1.2rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.1s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.board-btn:hover {
+    background: #D4A853;
+    border-color: #D4A853;
+    color: #000000;
+    transform: scale(1.02);
+}
+.board-btn .icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ─── DROPDOWN ─── */
+.dropdown-container {
+    margin: 1rem 0;
+}
+.dropdown-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.native-select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    border: 2px inset #cccccc;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+/* ─── CATEGORY HEADERS ─── */
+.cat-header {
+    background: #eeeeee;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #cccccc;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+/* ─── RESOURCE ROWS ─── */
+.resource-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 0;
+    font-size: 13px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #f0f0f0;
+    transition: border-color 0.2s;
+}
+.resource-row:last-child {
+    border-bottom: none;
+}
+.resource-row .tag {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #000;
+    min-width: 60px;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.resource-row .desc {
+    font-size: 11px;
+    color: #444444;
+    display: block;
+    transition: color 0.2s;
+}
+
+/* ─── CONTENT BLOCK (about/contact) ─── */
+.content-block {
+    padding: 1rem 0;
+}
+.content-block p {
+    margin-bottom: 0.5rem;
+}
+
+/* ─── BACK TO TOP ─── */
+.back-top {
+    font-size: 11px;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+/* ─── 90s HR ─── */
+.hr-90s {
+    border: none;
+    border-top: 1px solid #000000;
+    height: 2px;
+    background: #000000;
+    margin: 1rem 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+    text-align: center;
+    font-size: 11px;
+    padding: 1rem 0;
+    border-top: 1px solid #000000;
+    margin-top: 1.5rem;
+    transition: border-color 0.2s, color 0.2s;
+}
+.footer a {
+    color: #0000EE;
+}
+
+/* ─── DARK TOGGLE ─── */
+.dark-toggle {
+    background: #e0e0e0;
+    border: 2px outset #ffffff;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.dark-toggle:hover {
+    background: #D4A853;
+    color: #000;
+}
+
+/* ─── DARK THEME ─── */
+body.dark {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+body.dark a {
+    color: #88BBFF;
+}
+body.dark a:visited {
+    color: #CC88FF;
+}
+body.dark a:hover {
+    color: #D4A853;
+}
+
+body.dark .topbar {
+    background: #2a2a2a;
+    color: #cccccc;
+}
+body.dark .navbar {
+    background: #333333;
+    border-bottom-color: #444444;
+}
+body.dark .navbar a {
+    color: #88BBFF;
+    background: #2a2a2a;
+    border-color: #444444;
+}
+body.dark .navbar a:hover {
+    background: #D4A853;
+    color: #000000;
+}
+body.dark .navbar a.active {
+    background: #D4A853;
+    color: #000000;
+}
+body.dark .title-block {
+    border-color: #444444;
+    background: #1a1a1a;
+}
+body.dark .title-block h1 {
+    color: #e0e0e0;
+}
+body.dark .title-block .sub {
+    color: #cccccc;
+}
+body.dark .board-btn {
+    background: #2a2a2a;
+    border-color: #444444;
+    color: #e0e0e0;
+}
+body.dark .board-btn:hover {
+    background: #D4A853;
+    border-color: #D4A853;
+    color: #000000;
+}
+body.dark .cat-header {
+    background: #2a2a2a;
+    border-color: #444444;
+    color: #e0e0e0;
+}
+body.dark .resource-row {
+    border-bottom-color: #333333;
+}
+body.dark .resource-row .tag {
+    color: #cccccc;
+}
+body.dark .resource-row .desc {
+    color: #999999;
+}
+body.dark .footer {
+    border-top-color: #444444;
+    color: #999999;
+}
+body.dark .footer a {
+    color: #88BBFF;
+}
+body.dark .hr-90s {
+    background: #444444;
+    border-color: #444444;
+}
+body.dark .dark-toggle {
+    background: #333333;
+    border-color: #444444;
+    color: #e0e0e0;
+}
+body.dark .dark-toggle:hover {
+    background: #D4A853;
+    color: #000000;
+}
+body.dark .native-select {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444444;
+}
+body.dark .dropdown-label {
+    color: #e0e0e0;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+    body {
+        font-size: 13px;
+    }
+    .container {
+        padding: 0 0.5rem;
+    }
+    .title-block h1 {
+        font-size: 1.8rem;
+    }
+    .title-block .sub {
+        font-size: 1rem;
+    }
+    .navbar {
+        font-size: 12px;
+        padding: 3px 0.5rem;
+    }
+    .navbar a {
+        font-size: 12px;
+        margin: 2px 0;
+    }
+    .resource-row {
+        flex-direction: column;
+        padding: 6px 0;
+    }
+    .resource-row .tag {
+        min-width: auto;
+        font-size: 11px;
+    }
+    .resource-row .desc {
+        font-size: 11px;
+    }
+    .footer {
+        font-size: 10px;
+    }
+    .dark-toggle {
+        font-size: 11px;
+        padding: 2px 8px;
+    }
+    .board-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.8rem;
+    }
+    .board-btn {
+        padding: 0.8rem 0.3rem;
+        font-size: 0.9rem;
+    }
+    .board-btn .icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .title-block h1 {
+        font-size: 1.5rem;
+    }
+    .navbar a {
+        font-size: 11px;
+        padding: 1px 4px;
+    }
+    .board-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+    .board-btn {
+        padding: 0.6rem 0.2rem;
+        font-size: 0.8rem;
+    }
+    .board-btn .icon {
+        font-size: 1.3rem;
+    }
+}

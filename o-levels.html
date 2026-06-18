@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>O Levels – parhlobhai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <span><b>parhlobhai&nbsp;&nbsp;|&nbsp;&nbsp;parhlobhai.com</b></span>
+            <button class="dark-toggle" id="darkToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="o-levels.html">O Levels</a>
+            <a href="igcse.html">IGCSE</a>
+            <a href="a-levels.html">A Levels</a>
+            <a href="matriculation.html">Matriculation</a>
+            <a href="intermediate.html">Intermediate</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="title-block">
+            <h1>O Levels</h1>
+            <div class="sub">Cambridge O Level resources – pure old school.</div>
+        </div>
+
+        <div class="dropdown-container">
+            <label for="subjectSelect" class="dropdown-label">Select a subject:</label>
+            <select id="subjectSelect" class="native-select">
+                <option value="physics">⚡ Physics</option>
+                <option value="chemistry">🧪 Chemistry</option>
+                <option value="math">📐 Mathematics</option>
+                <option value="biology">🔬 Biology</option>
+            </select>
+        </div>
+
+        <div id="resourcesContainer"></div>
+
+        <hr class="hr-90s">
+
+        <div class="footer">
+            &copy; 2026 parhlobhai &nbsp;|&nbsp; <a href="about.html">About</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const subjects = {
+            physics: {
+                name: "⚡ Physics",
+                resources: [
+                    { tag: "[PDF]", title: "Physics Formula Sheet", desc: "All formulas in one place" },
+                    { tag: "[LINK]", title: "May/June 2023 P1 & P2", desc: "With mark schemes" },
+                    { tag: "[PDF]", title: "Electricity & Magnetism Notes", desc: "Circuits, fields, motors" }
+                ]
+            },
+            chemistry: {
+                name: "🧪 Chemistry",
+                resources: [
+                    { tag: "[PDF]", title: "Stoichiometry Guide", desc: "Moles, calculations" },
+                    { tag: "[LINK]", title: "May/June 2023 P1 & P2", desc: "With mark schemes" },
+                    { tag: "[PDF]", title: "Organic Chemistry Basics", desc: "Alkanes, alkenes, alcohols" }
+                ]
+            },
+            math: {
+                name: "📐 Mathematics",
+                resources: [
+                    { tag: "[PDF]", title: "Algebra & Geometry Notes", desc: "Practice questions" },
+                    { tag: "[LINK]", title: "May/June 2023 P1 & P2", desc: "With mark schemes" },
+                    { tag: "[PDF]", title: "Trigonometry Guide", desc: "Sines, cosines, identities" }
+                ]
+            },
+            biology: {
+                name: "🔬 Biology",
+                resources: [
+                    { tag: "[PDF]", title: "Cell Division Notes", desc: "Mitosis, meiosis, enzymes" },
+                    { tag: "[LINK]", title: "May/June 2023 P1 & P2", desc: "With mark schemes" },
+                    { tag: "[PDF]", title: "Ecology & Environment", desc: "Food chains, cycles, pollution" }
+                ]
+            }
+        };
+
+        function renderResources(key) {
+            const sub = subjects[key];
+            if (!sub) return;
+            const container = document.getElementById('resourcesContainer');
+            let html = `<div class="cat-header">&gt;&gt; ${sub.name}</div>`;
+            sub.resources.forEach(r => {
+                html += `
+                    <div class="resource-row">
+                        <span class="tag">${r.tag}</span>
+                        <div><a href="#">${r.title}</a><span class="desc">${r.desc}</span></div>
+                    </div>
+                `;
+            });
+            html += `<div class="back-top"><a href="#top">[Back to Top]</a></div>`;
+            container.innerHTML = html;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const select = document.getElementById('subjectSelect');
+            renderResources(select.value);
+            select.addEventListener('change', function() {
+                renderResources(this.value);
+            });
+        });
+    </script>
+</body>
+</html>

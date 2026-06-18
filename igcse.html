@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>IGCSE – parhlobhai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <span><b>parhlobhai&nbsp;&nbsp;|&nbsp;&nbsp;parhlobhai.com</b></span>
+            <button class="dark-toggle" id="darkToggleBtn" onclick="toggleDarkMode()">🌙 Dark</button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="o-levels.html">O Levels</a>
+            <a href="igcse.html">IGCSE</a>
+            <a href="a-levels.html">A Levels</a>
+            <a href="matriculation.html">Matriculation</a>
+            <a href="intermediate.html">Intermediate</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="title-block">
+            <h1>IGCSE</h1>
+            <div class="sub">International GCSE – for the global student.</div>
+        </div>
+
+        <div class="dropdown-container">
+            <label for="subjectSelect" class="dropdown-label">Select a subject:</label>
+            <select id="subjectSelect" class="native-select">
+                <option value="business">💼 Business Studies</option>
+                <option value="econ">📈 Economics</option>
+                <option value="ict">💻 ICT</option>
+            </select>
+        </div>
+
+        <div id="resourcesContainer"></div>
+
+        <hr class="hr-90s">
+
+        <div class="footer">
+            &copy; 2026 parhlobhai &nbsp;|&nbsp; <a href="about.html">About</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const subjects = {
+            business: {
+                name: "💼 Business Studies",
+                resources: [
+                    { tag: "[LINK]", title: "Business Studies Notes", desc: "Marketing, finance, operations" },
+                    { tag: "[PDF]", title: "Case Studies", desc: "Real-world examples" }
+                ]
+            },
+            econ: {
+                name: "📈 Economics",
+                resources: [
+                    { tag: "[PDF]", title: "Economics Revision", desc: "Micro & macro basics" },
+                    { tag: "[LINK]", title: "Past Papers", desc: "2015–2025" }
+                ]
+            },
+            ict: {
+                name: "💻 ICT",
+                resources: [
+                    { tag: "[PDF]", title: "ICT Theory Notes", desc: "Networks, security, databases" },
+                    { tag: "[LINK]", title: "Programming basics", desc: "Python & pseudocode" }
+                ]
+            }
+        };
+
+        function renderResources(key) {
+            const sub = subjects[key];
+            if (!sub) return;
+            const container = document.getElementById('resourcesContainer');
+            let html = `<div class="cat-header">&gt;&gt; ${sub.name}</div>`;
+            sub.resources.forEach(r => {
+                html += `
+                    <div class="resource-row">
+                        <span class="tag">${r.tag}</span>
+                        <div><a href="#">${r.title}</a><span class="desc">${r.desc}</span></div>
+                    </div>
+                `;
+            });
+            html += `<div class="back-top"><a href="#top">[Back to Top]</a></div>`;
+            container.innerHTML = html;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const select = document.getElementById('subjectSelect');
+            renderResources(select.value);
+            select.addEventListener('change', function() {
+                renderResources(this.value);
+            });
+        });
+    </script>
+</body>
+</html>
